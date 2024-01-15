@@ -1,0 +1,97 @@
+* {
+  box-sizing: border-box;
+}
+
+.body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #6c9668;
+}
+.loader {
+  height: 200px;
+  width: 200px;
+  position: relative;
+  box-shadow: 16px 14px 20px #0000008c;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  overflow: hidden;
+}
+.loader::before {
+  content: "";
+  background-image: conic-gradient(#00ff40 20deg, transparent 120deg);
+  width: 150%;
+  height: 150%;
+  position: absolute;
+  animation: spin 1.5s linear infinite;
+}
+.loader::after {
+  content: " ";
+  height: 190px;
+  width: 190px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  color: #ff0052;
+  font-size: larger;
+  background-image: url(./icon.png);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: inset 20px 20px 20px #0000008c;
+}
+
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+  }
+}
+
+.editorToolBar {
+  min-height: 200px;
+  overflow: hidden;
+}
+
+.glowingText span {
+  animation: animate 1.4s linear infinite;
+}
+.glowingText span:nth-child(1) {
+  animation-delay: 0s;
+}
+.glowingText span:nth-child(2) {
+  animation-delay: 0.4s;
+}
+.glowingText span:nth-child(3) {
+  animation-delay: 0.8s;
+}
+
+@keyframes animate {
+  0%,
+  80% {
+    color: #816c6c;
+    text-shadow: none;
+  }
+  100% {
+    color: #fea82f;
+    text-shadow: 0 0 10px #fea82f, 0 0 10px #fea82f, 0 0 20px #fea82f,
+      0 0 400px #fea82f, 0 0 80px #fea82f, 0 0 120px #fea82f, 0 0 160px #fea82f;
+  }
+}

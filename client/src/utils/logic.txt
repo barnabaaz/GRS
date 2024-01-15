@@ -1,0 +1,22 @@
+
+json db logic
+
+[
+   {  questionText: "what is the capital of  France",
+    answerOptions: [
+      { answerText: "London", isCorrect: false, checked:false },
+      { answerText: "Accra", isCorrect: false, checked:false },
+      { answerText: "Lagos", isCorrect: false, checked:false},
+      { answerText: "Paris", isCorrect: true, checked:false },
+    ],
+}
+]
+
+db logic
+
+save all questions to db
+randomise and set number of questions for a user 
+pull request of question from db and all checked answers if any
+
+
+update choosen answer on each click from user 

@@ -1,0 +1,85 @@
+GET  http://localhost:5000/
+###
+POST http://localhost:5000/auth
+Content-Type: application/json
+
+{
+     "firstName":"barnabas",
+      "password": "omodara130",
+      "email":"barnabaaz@gmail.com",
+      "lastName":"Omodara",
+      "middleName":"Olushola",
+      "gender":"male",
+      "age":25,
+      "rrr":"2845689m",
+      "localGovernmentOfOrigin":"Yagba-west",
+      "timeLeft":60
+}
+
+###
+
+POST http://localhost:5000/auth/login
+
+Content-Type: application/json
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiN…yNDZ9.pa5lZCpsnWqOc3GA1hL0dz_ibPQEVuHaKasghDroKwI
+     {
+           "email":"barnabaaz@gmail.com",
+      "password": "omodara130"
+     } 
+
+###
+POST http://localhost:5000/admin/create
+Content-Type: application/json
+
+{
+     "username":"barnabaaz",
+     "password":"omodara130",
+     "firstName":"Barnabas",
+     "lastName":"Omodara",
+     "isAdmin":true
+
+}    
+###
+POST http://localhost:5000/admin/login
+     Content-Type: application/json
+
+     {
+          "username":"barnabaaz",
+          "password":"omodara130"
+          
+
+     }
+
+/// get all admin User Data 
+###
+GET http://localhost:5000/admin/verify-admin
+token:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNjFjYjdlMjFmNGE5NTgzYjk2OTI3Njk3IiwiaWF0IjoxNjQwNzM0NzYzLCJleHAiOjE2NDA3MzgzNjN9.PcAHAwc-hqegtQkp_W0T00zdr1Q6IzbgobCgIrzY_zc
+
+###
+POST  http://localhost:5000/student/login
+Content-Type: application/json
+
+{
+     "username":"barnabaaz",
+     "password":"omodara130"
+}
+###
+GET http://localhost:5000/student/
+
+###
+POST http://localhost:5000/student/student-create
+
+
+### 
+DELETE  http://localhost:5000/question/delteID
+Content-type: application/json
+
+{
+     "id":"61dc3a5c576d4a5ad372b216"
+}
+
+###
+GET http://localhost:5000/result/get-Scheduled/Primary Five
+
+###
+DELETE http://localhost:5000/deleteresult/61dc2cb1ea12de99e0251911
